@@ -1,0 +1,40 @@
+#animals, #animalbuttons {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.item{
+	margin: 10px;
+}
+
+#addAnimal, .dog{
+	background-color: #3CC3C0;
+	border-radius: 8px;
+	border: none;
+	padding: 10px;
+	color: white;
+	margin: 5px;
+}
+
+#addAnimal:active{
+	background-color: #2D6E6D;
+	color: white;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.04), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#animalbuttons{
+	display:flex;
+}
+
+#animal-input{
+	margin: 10px 0;
+	display:block;
+	width: 100%;
+}
+
+#animal-form{
+	float: right;
+	width: 300px;
+	font-weight: bold;
+}
+
