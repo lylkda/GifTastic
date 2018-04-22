@@ -1,12 +1,7 @@
 $(document).ready(function()
 {
-
-
 	var animals = ["Corgi", "Shiba Inu", "Bull Dog", "Dachsund", "Pit Bull", "Pug", "Husky", "German Pinscher", "Akita", "Alaskan Malamute", "Austrailian Cattle Dog", "Border Collie", "Great Dane", "Siberian Husky", "Icelandic Sheepdog", "Pomeranian", "Rottweiler"];
-
-
 	function renderButtons(){
-
 		for (var i = 0; i<animals.length; i++){
 			var btn = $("<button>");
 			btn.addClass("dog");
@@ -15,7 +10,6 @@ $(document).ready(function()
 			$("#animalbuttons").append(btn);
 		}//End for loop
 	}//End RenderButtons()
-
 	function addAnimal(event){
 		event.preventDefault();
 		$("#animalbuttons").empty();
@@ -24,10 +18,9 @@ $(document).ready(function()
 		animals.push(animal);
 		console.log(animal);
 		} //End conditional to not have empty button
-
 	renderButtons();
 	}//End addMovie()
-
+	
 	//Add button
 	$("#addAnimal").on("click", addAnimal);
 	//Initial buttons of Corgi, Shiba and Bull Dog
@@ -38,11 +31,11 @@ $(document).ready(function()
 		var name = $(this).attr("data-name");
 		var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
 		name + "&api_key=dc6zaTOxFJmzC&limit=10";
-
+	
 		$.ajax({
 			url: queryURL,
 			method: "GET"
-        })//End Ajax
+		})
 		.done(function(response){
 			console.log(response);
 			var results = response.data;
